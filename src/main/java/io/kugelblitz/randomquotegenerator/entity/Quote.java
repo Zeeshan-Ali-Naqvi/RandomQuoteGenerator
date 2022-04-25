@@ -1,4 +1,4 @@
-package io.kugelblitz.randomquotegenerator.model;
+package io.kugelblitz.randomquotegenerator.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +18,8 @@ import javax.persistence.Id;
 public class Quote {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String quote = "This is a quote";
-    private String author = "Zeeshan";
+    private String quote;
+    private String author;
 }
